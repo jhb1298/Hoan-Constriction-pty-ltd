@@ -1,0 +1,158 @@
+html{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url(top-outpost-jobs-1080x540.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#logInContainer{
+    display: block;
+    position: fixed;
+    background-color: rgba(255, 235, 205, 0.356);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+}
+#logIn {
+    position: fixed;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    border-radius: 5%;
+    padding: 40px;
+    background-color: rgba(155, 111, 53, 0.705);
+    text-align: center;
+  }
+  
+nav{
+    height: 15vh;
+    background-color: rgb(12, 12, 49);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+h1{
+    color: antiquewhite;
+    margin-top: 0;
+    font-size: 50px;
+    margin: auto 0;
+}
+#nameAndLogo{
+    display: flex;
+    align-items: center;
+}
+img{
+    height: 7vh;
+    aspect-ratio: 1/1;
+    margin:10px ;
+}
+#navLinks{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 60vw;
+    margin-left: auto;
+}
+a{
+    font-size: 25px;
+    text-decoration: none;
+    color: antiquewhite;
+    margin-bottom: 15px;
+}
+
+
+main{
+    min-height: 85vh;
+    margin-top: 15vh;   
+    padding: 3vh 0;
+}
+#conatiner{
+    margin: 0 auto;
+    margin-bottom: 0vh;
+    width: 60%;
+    padding: 3vh 0;
+    background-color: rgba(165, 155, 124, 0.568);
+    padding: 20px;
+}
+#conatiner>div{
+    background-color: rgba(63, 62, 54, 0.322);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 5%;
+}
+h2{
+    font-size: 45px;
+    color: rgb(2, 3, 19);
+}
+h3{
+    text-align: center;
+    font-size: 40px;
+    color: antiquewhite;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 100px;
+    margin: 0 auto;
+    height: fit-content; 
+    font-size: 30px; 
+    color: antiquewhite;
+}
+
+input,select{
+    font-size: 25px;
+    margin: 10px;
+    min-width: 150px;
+    border-radius: 5%;
+    background-color: rgba(245, 222, 179, 0.5);
+    border: 5px solid rgb(59, 57, 57);
+}
+input[type="submit"]{
+    background-color: rgba(101, 255, 54, 0.637);
+    width: 30%;
+    align-self: center;
+}
+button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(101, 255, 54, 0.637);
+    font-size: 25px;
+    border: 5px solid rgb(59, 57, 57);
+    border-radius: 5%;
+  }
+
+  #t1{
+    height: 100px;
+    background-color: aquamarine;
+  }
+
+  
+
+
+
+
+
+footer{
+    background-color: rgb(12, 12, 49);
+    color: antiquewhite;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+p{
+  margin: 0;
+  padding: 5px;  
+  font-size: 20px;
+}
+address{
+    margin: 10px 0;
+}

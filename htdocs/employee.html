@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+    <nav>
+        <div id="nameAndLogo">
+            <img src="Capture-fotor-20230712151432.png" alt="">
+            <h1>Hoan Constraction Pty Ltd.</h1>
+        </div>
+        <div id="navLinks">
+            <a href="home.html">Home</a>
+            <a href="employee.html">Employee Reg.</a>
+            <a href="employeeInfo.html">Employee Info.</a>
+            <a href="manager.html">Manager</a>
+            <a href="#f">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div id="conatiner">
+            <h3>Enter the nessesury informations</h3>
+            <form action="http://localhost/employeeReg.php" method="POST">
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div>
+                    <label for="dept">Depertment</label>
+                    <select id="dept" name="dept">
+                        <option value="1">Engineering</option>
+                        <option value="2">Foreman</option>
+                        <option value="3">Labor</option>
+                      </select>
+                </div>
+                <div>
+                    <label for="tOW">Type of work</label>
+                    <select id="tOW" name="tOW">
+                        <option value='f'>Full time</option>
+                        <option value='p'>Part time</option>
+                      </select>
+                </div>
+                <div>
+                    <label for="rate">Hourly Rate</label>
+                    <input id="rate" name="rate" type="number"  required >
+                </div>
+                <div>
+                    <label for="strtNo">Street No.</label>
+                    <input id="strtNo" name="strtNo" type="text" required>
+                </div>
+                <div>
+                    <label for="strtName">Street Name</label>
+                    <input id="strtName" name="strtName" type="text" required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" required>
+                </div>
+                <div>
+                    <label for="zC">Zip Code</label>
+                    <input id="zC" name="zC" type="text" required>
+                </div>
+              
+                <input type="submit">
+            </form>
+        </div>     
+    </main>
+    <footer id="f">
+        <div>
+            <p>About</p>
+            <p>Helpline</p>
+            <p>Terms and Conditions</p>
+        </div>
+        <div>
+            <p>Mobile: +1 555-123-4567</p>
+            <p>Mail: examplemail@gmail.com</p>
+            <address>123 Main Street Cityville, State 12345 Country</address>
+        </div>
+        <div>
+            <p>Developed By-</p>
+            <address>------------------CSE,RUET</address>
+        </div>
+        
+    </footer>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var rateInput = document.getElementById("rate");
+            var type=document.getElementById("tOW");
+            rateInput.addEventListener("input", checkInputValue);
+    
+            function checkInputValue() {
+               
+                if(type.value=="f"){
+                    rateInput.value=0;
+                }
+                else{
+                    if (rateInput.value < 25 || rateInput.value > 60) {
+                    rateInput.value = rateInput.value > 60 ? 60 : 25;
+                }
+                }
+            }
+        });
+    </script>
+    
+    
+</body>
+
+</html>

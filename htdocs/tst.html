@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="manager.css">
+</head>
+
+<body>
+    <nav>
+        <div id="nameAndLogo">
+            <img src="Capture-fotor-20230712151432.png" alt="">
+            <h1>Hoan Constraction Pty Ltd.</h1>
+        </div>
+        <div id="navLinks">
+            <a href="home.html">Home</a>
+            <a href="employee.html">Employee Reg.</a>
+            <a href="employeeInfo.html">Employee Info.</a>
+            <a href="manager.html">Manager</a>
+            <a href="#f">Contact</a>
+        </div>
+    </nav>
+    <div id="logInContainer">
+        <div id="logIn">
+            <h1>Please logIn first</h1>
+            <form action="">
+                <div>
+                    <label for="id">Manager ID</label>
+                    <input id="id" type="number" required>
+                </div>
+                <div>
+                    <label for="pass">Password</label>
+                    <input id="pass" type="password" required>
+                </div>
+                <input type="submit" value="logIn" onclick="hideLoginPage()">
+            </form>
+        </div>
+    </div>
+    <main>
+        <div id="conatiner">
+            <h2>1. List of all employees of a type working in a certain project of a city.</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="">
+                    <div>
+                        <label for="dept">Depertment</label>
+                        <select id="dept">
+                            <?php
+                            // Establish database connection
+                            $servername = "localhost";
+                            $username = "root";
+                            $password = "your_password";
+                            $database = "your_database";
+
+                            $conn = mysqli_connect($servername, $username, $password, $database);
+
+                            // Check connection
+                            if (!$conn) {
+                                die("Connection failed: " . mysqli_connect_error());
+                            }
+
+                            // Fetch project names from the database table
+                            $sql = "SELECT project_name FROM projects";
+                            $result = mysqli_query($conn, $sql);
+
+                            // Loop through the query results and generate options
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<option value='" . $row['project_name'] . "'>" . $row['project_name'] . "</option>";
+                            }
+
+                            // Close the database connection
+                            mysqli_close($conn);
+                            ?>
+                        </select>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pName">Project Name</label>
+                        <select name="pName" id="pName">
+                            <option value="1"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pLoc">Project Location</label>
+                        <select name="pLoc" id="pLoc">
+                            <option value="1"></option>
+                        </select>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t1">
+
+                </div>
+            </div>
+           
+        </div>
+    </main>
+    <footer id="f">
+        <div>
+            <p>About</p>
+            <p>Helpline</p>
+            <p>Terms and Conditions</p>
+        </div>
+        <div>
+            <p>Mobile: +1 555-123-4567</p>
+            <p>Mail: examplemail@gmail.com</p>
+            <address>123 Main Street Cityville, State 12345 Country</address>
+        </div>
+        <div>
+            <p>Developed By-</p>
+            <address>------------------CSE,RUET</address>
+        </div>
+
+    </footer>
+
+    </script>
+
+</body>
+
+</html>

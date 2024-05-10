@@ -1,0 +1,123 @@
+html{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+nav{
+    height: 15vh;
+    background-color: rgb(12, 12, 49);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+h1{
+    color: antiquewhite;
+    margin-top: 0;
+    font-size: 50px;
+    margin: auto 0;
+}
+#nameAndLogo{
+    display: flex;
+    align-items: center;
+}
+img{
+    height: 7vh;
+    aspect-ratio: 1/1;
+    margin:10px ;
+}
+#navLinks{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 60vw;
+    margin-left: auto;
+}
+a{
+    font-size: 25px;
+    text-decoration: none;
+    color: antiquewhite;
+    margin-bottom: 15px;
+}
+main{
+    margin-top: 15vh;
+}
+h3{
+    font-size: 100px;
+    color: rgb(30, 53, 6);
+    margin: 0;
+    padding-top: 40px;
+}
+.divs{
+    text-align: center;
+    height: 120vh;
+}
+#services{
+    background-image:url(top-outpost-jobs-1080x540.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+#services>div{
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 5%;
+    padding: 8%;
+    width: 50%;
+}
+#serviceList{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+#serviceList a{
+    color: greenyellow;
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+h4{
+    color: rgb(163, 172, 194);
+    padding: 20px;
+    font-size: 150px;  
+    margin: 5px;  
+}
+#buildings{
+    background-image: url(building.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#roads{
+    background-image: url(Highway-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bridges{
+    background-image: url(Bridge.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    background-color: rgb(12, 12, 49);
+    color: antiquewhite;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+p{
+  margin: 0;
+  padding: 5px;  
+  font-size: 20px;
+}
+address{
+    margin: 10px 0;
+}

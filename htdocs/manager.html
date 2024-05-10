@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="manager.css">
+</head>
+
+<body>
+    <nav>
+        <div id="nameAndLogo">
+            <img src="Capture-fotor-20230712151432.png" alt="">
+            <h1>Hoan Constraction Pty Ltd.</h1>
+        </div>
+        <div id="navLinks">
+            <a href="home.html">Home</a>
+            <a href="employee.html">Employee Reg.</a>
+            <a href="employeeInfo.html">Employee Info.</a>
+            <a href="manager.html">Manager</a>
+            <a href="#f">Contact</a>
+        </div>
+    </nav>
+    <div id="logInContainer">
+        <div id="logIn">
+            <h1>Please logIn first</h1>
+            <form action="">
+                <div>
+                    <label for="mid">Manager ID</label>
+                    <input id="mid" type="number" required>
+                </div>
+                <div>
+                    <label for="mpass">Password</label>
+                    <input id="mpass" type="password" required>
+                </div>
+                <input type="submit" value="logIn" onclick="hideLoginPage(event)">
+            </form>
+        </div>
+    </div>
+    <main>
+        <div id="conatiner">
+            <h2>1. List of all employees of a type working in a certain project of a city.</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/task1.php" method="POST" target="_blank">
+                    <div>
+                        <label for="dept1">Depertment</label>
+                        <select name="dept1" id="dept1">
+                            <option value="Engineering">Engineering</option>
+                            <option value="Foreman">Foreman</option>
+                            <option value="Labor">Labor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pName1">Project Name</label>
+                        <select name="pName1" id="pName1">
+                            <option value="Googong Subdivision">Googong Subdivision</option>
+                            <option value="Burton Highway">Burton Highway</option>
+                            <option value="Haven Resort">Haven Resort</option>
+                            <option value="Horizon Complex">Horizon Complex</option>
+                            <option value="Brisbane Highway">Brisbane Highway</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pLoc1">Project Location</label>
+                        <select name="pLoc1" id="pLoc1">
+                            <option value="Googong">Googong</option>
+                            <option value="Burton Canberra">Burton Canberra</option>
+                            <option value="Queensland">Queensland</option>
+                            <option value="Sydney">Sydney</option>
+                            <option value="Brisbane">Brisbane </option>
+                        </select>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="resultTable">
+                    
+                </div>
+            </div>
+            <h2>2. List of all employees of a type working in a certain project of a city working more than a certain
+                hour per week.</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/task2.php" method="post">
+                    <div>
+                        <label for="dept2">Depertment</label>
+                        <select id="dept2" name="dept2">
+                            <option value="Engineering">Engineering</option>
+                            <option value="Foreman">Foreman</option>
+                            <option value="Labor">Labor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pName2">Project Name</label>
+                        <select name="pName2" id="pName2">
+                            <option value="Googong Subdivision">Googong Subdivision</option>
+                            <option value="Burton Highway">Burton Highway</option>
+                            <option value="Haven Resort">Haven Resort</option>
+                            <option value="Horizon Complex">Horizon Complex</option>
+                            <option value="Brisbane Highway">Brisbane Highway</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pLoc2">Project Location</label>
+                        <select name="pLoc2" id="pLoc2">
+                            <option value="Googong">Googong</option>
+                            <option value="Burton Canberra">Burton Canberra</option>
+                            <option value="Queensland">Queensland</option>
+                            <option value="Sydney">Sydney</option>
+                            <option value="Brisbane">Brisbane </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="mHour2">Minimum Hour</label>
+                        <input id="mHour2" name="mHour2" type="number" required>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t2">
+
+                </div>
+            </div>
+            <h2>3. Retrieve the names and addresses of all employees who work on at least one project located in a city
+                but whose department has no location in a certain city</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/task3.php" method="post">
+                    <div>
+                        <label for="pLoc3">Project Location</label>
+                        <select name="pLoc3" id="pLoc3">
+                            <option value="Googong">Googong</option>
+                            <option value="Burton Canberra">Burton Canberra</option>
+                            <option value="Queensland">Queensland</option>
+                            <option value="Sydney">Sydney</option>
+                            <option value="Brisbane">Brisbane </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="dLoc3">Depertment Location</label>
+                        <select name="dLoc3" id="dLoc3">
+                            <option value="Canberra">Canberra</option>
+                            <option value="Sydney">Sydney</option>
+                            <option value="Adelaide">Adelaide</option>
+                        </select>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t3">
+
+                </div>
+            </div>
+            <h2>4. Retrieve the names of employees who work on two project at a time.</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/task4.php" method="post">
+                    <div>
+                        <label for="pName41">Project 1</label>
+                        <select name="pName41" id="pName41">
+                            <option value="Googong Subdivision">Googong Subdivision</option>
+                            <option value="Burton Highway">Burton Highway</option>
+                            <option value="Haven Resort">Haven Resort</option>
+                            <option value="Horizon Complex">Horizon Complex</option>
+                            <option value="Brisbane Highway">Brisbane Highway</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pName42">Project 2</label>
+                        <select name="pName42" id="pName42">
+                            <option value="Googong Subdivision">Googong Subdivision</option>
+                            <option value="Burton Highway">Burton Highway</option>
+                            <option value="Haven Resort">Haven Resort</option>
+                            <option value="Horizon Complex">Horizon Complex</option>
+                            <option value="Brisbane Highway">Brisbane Highway</option>
+                        </select>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t4">
+
+                </div>
+            </div>
+            <h2>5. Create a view which lists out the emp_name, dept_name, type_of_work, basic, deduction andnet_salary from the above relational databases..</h2>
+            <div>
+                <form action="http://localhost/task5.php" method="post">
+                    <h3>Enter the nessesury informations</h3>
+                    <div>
+                        <label for="tableName">View Table Name</label>
+                        <input id="tableName" name="tableName" type="text" required>
+                    </div>
+                    <input type="submit" value="Create">
+                </form>
+                <div id="t6">
+
+                </div>
+            </div>
+
+            <h2>6. Retrieve the number of working hour of employees in between two Date</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/task6.php" method="post">
+                    <div>
+                        <label for="d0">Start Date</label>
+                        <input id="d0" name="d0" type="date" pattern="\d{4}/\d{2}/\d{2}" required>
+                    </div>
+                    <div>
+                        <label for="d1">End Date</label>
+                        <input id="d1" name="d1" type="date" pattern="\d{4}/\d{2}/\d{2}" required>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t6">
+
+                </div>
+            </div>
+            <h2>7. Insert data into ft_pt_work_h.</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/ft_pt_work_input.php" method="POST">
+                    <div>
+                        <label for="id">Employee ID</label>
+                        <input id="id" name="id" type="number" required>
+                    </div>
+                    <div>
+                        <label for="pName">Project Name</label>
+                        <select name="pName" id="pName1">
+                            <option value="1">Googong Subdivision</option>
+                            <option value="2">Burton Highway</option>
+                            <option value="3">Haven Resort</option>
+                            <option value="4">Horizon Complex</option>
+                            <option value="5">Brisbane Highway</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hour">No. of hour</label>
+                        <input id="hour" name="hour" type="number" required>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t1">
+
+                </div>
+            </div>
+            <h2>8. Insert data into salary.</h2>
+            <div>
+                <h3>Enter the nessesury informations</h3>
+                <form action="http://localhost/salaryinput.php" method="POST">
+                    <div>
+                        <label for="id">Employee ID</label>
+                        <input id="id" name="id" type="number" required>
+                    </div>
+                    <div>
+                        <label for="tow">Type of Work</label>
+                        <select name="tow" id="tow">
+                            <option value="f">Full time</option>
+                            <option value="p">Part time</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="basic">Basic</label>
+                        <input id="basic" name="basic" type="number" required>
+                    </div>
+                    <div>
+                        <label for="al">Allowance</label>
+                        <input id="al" name="al" type="number" required>
+                    </div>
+                    <div>
+                        <label for="de">Deduction</label>
+                        <input id="de" name="de" type="number" required>
+                    </div>
+                    <div>
+                        <label for="date">Salary Date</label>
+                        <input id="date" name="date" type="date" required>
+                    </div>
+                    <input type="submit">
+                </form>
+                <div id="t1">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="f">
+        <div>
+            <p>About</p>
+            <p>Helpline</p>
+            <p>Terms and Conditions</p>
+        </div>
+        <div>
+            <p>Mobile: +1 555-123-4567</p>
+            <p>Mail: examplemail@gmail.com</p>
+            <address>123 Main Street Cityville, State 12345 Country</address>
+        </div>
+        <div>
+            <p>Developed By-</p>
+            <address>------------------CSE,RUET</address>
+        </div>
+
+    </footer>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var tow = document.getElementById("tOW");
+            var basic=document.getElementById("basic")
+            tow.addEventListener("input", checkInputValue);
+    
+            function checkInputValue() {
+                if (tow.value=='p') {
+                    basic.value=0;
+                }
+            }
+        });
+
+        function hideLoginPage(event) {
+            event.preventDefault();
+            var loginPage = document.getElementById("logInContainer");
+            var id=document.getElementById("mid");
+            var pass=document.getElementById("mpass");
+            if(id.value==128 && pass.value=="1234"){
+                loginPage.style.display = "none";
+            }
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
